@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" e content="IE=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="main">
+        <section class="main__principal">
+            <a href="https://github.com/xandreveras" target="_blank"><img src="img/logo.png" alt="Logo da Alura"></a>
+            <div class="main__principal__mensagem">
+                <textarea id="mensagem" autofocus placeholder="Digite seu texto"></textarea>
+                <div class="main__principal__mensagem__info">
+                    <img src="img/exclamacao.png">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="main__principal__mensagem__botoes">
+                    <button onclick="criptografar()" id="criptografar" class="main__principal__mensagem__botoes__criptografar" type="button">Criptografar</button>
+                    <button onclick="descriptografar()" id="descriptografar" class="main__principal__mensagem__botoes__descriptografar" type="button">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section id="janelaApresentacao" class="main__coluna">
+            <div class="main__coluna__conteudo">
+                <img src="img/julioCesar.jpg" alt="Buscando mensagem">
+                <h1>Nenhuma mensagem encontrada</h1>
+                <p>Digite ao lado um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+        </section>
+        <section id="janelaResultado" class="main__resultado main__coluna" hidden>
+            <div class="main__resultado__conteudo main__coluna__conteudo">
+                <p id="resultado"></p>
+                <button onclick="copiarTexto()" id="copiar" class="main__resultado__conteudo__botao main__principal__mensagem__botoes__descriptografar" type="button">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Alexandre Veras</p>
+    </footer>
+    <script src="js/app.js" defer></script>
+</body>
+
+</html>

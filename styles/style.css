@@ -1,0 +1,243 @@
+
+:root{
+    --cor-fundo:#201b1b;
+    --cor-primaria:#b49600;
+    --cor-secundaria: #970012;
+    --cor-fontes:#495057;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+.main{
+    display: flex;
+    margin: auto;
+    max-width: 1440px;
+    height: 1024px;
+    padding: 40px;
+    gap: 80px;
+}
+
+.main__principal{
+    width: 70%;
+}
+
+.main__principal a img{
+    width: 120px;
+}
+
+.main__principal__mensagem{
+    margin: 80px 0 0 15%;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 16px;
+}
+
+.main__principal__mensagem textarea{
+    resize: none;
+    width: 100%;
+    height: 667px;
+    color: var(--cor-primaria);
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+}
+
+.main__principal__mensagem textarea::placeholder{
+    color:var(--cor-primaria);
+}
+
+.main__principal__mensagem textarea:focus, #resultado:focus{
+    outline: 0;
+}
+
+.main__principal__mensagem__info{
+    display: flex;
+    height: 18px;
+    line-height: 18px;
+    gap: 8px;
+}
+
+.main__principal__mensagem__info img{
+    width: 16px;
+}
+
+.main__principal__mensagem__info p{
+    color: var(--cor-fontes);
+    font-size: 1rem;
+}
+
+.main__principal__mensagem__botoes{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    -ms-flex-align: center;
+    justify-content: space-between;
+}
+
+.main__principal__mensagem__botoes button, .main__resultado__conteudo__botao{
+    width: 100%;
+    height: 67px;
+    padding: 24px;
+    border-radius: 24px;
+    border: solid 1px var(--cor-primaria);
+    font-size: 1rem;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.main__principal__mensagem__botoes button:hover, .main__resultado__conteudo__botao:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+}
+
+.main__principal__mensagem__botoes button:active, .main__resultado__conteudo__botao:active{
+    opacity: 0.3;
+}
+
+
+.main__principal__mensagem__botoes__criptografar{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.main__principal__mensagem__botoes__descriptografar{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+
+.main__coluna{
+    width: 30%;
+    height: 944px;
+    background-color: white;
+    border-radius: 32px;
+    color: var(--cor-fontes);
+    padding: 32px;
+}
+
+.main__coluna__conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    height: inherit;
+    margin: auto;
+    text-align: center;
+}
+
+.main__coluna img{
+    width: 100%;
+}
+
+.main__resultado{
+    padding: 32px;
+}
+
+.main__resultado__conteudo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 880px;
+}
+
+#resultado{
+    width: 100%;
+    height: 781px;
+    color: var(--cor-fontes);
+    font-size: 1.5rem;
+    text-align: left;
+    vertical-align: text-top;
+    word-break: break-word;
+}
+
+.rodape{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 1100px){
+    .main__principal{
+        width: 60%;
+    }
+
+    .main__coluna{
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 800px){
+    .main{
+        flex-direction: column;
+        margin: auto;
+        height: auto;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .main__principal{
+        width: 100%;
+    }
+
+    .main__principal__mensagem{
+        margin: auto;
+        margin-top: 80px;
+    }
+
+    .main__principal__mensagem textarea{
+        width: 100%;
+        height: 580px;
+    }
+
+    .main__coluna{
+        width: 100%;
+        height: auto;
+    }
+
+    .main__coluna img{ 
+        display: none;
+    }
+
+    .main__resultado__conteudo{
+        height: auto;
+    }
+
+    #resultado{
+        height: auto;
+    }
+}
+
+@media (max-width: 400px){
+
+    .main{
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .main__principal__mensagem {
+        margin-top: 56px;
+    }
+
+    .main__principal__mensagem textarea{
+        width: 100%;
+        height: 283px;
+    }
+
+    .main__principal__mensagem__botoes{
+        flex-direction: column;
+    }
+}
